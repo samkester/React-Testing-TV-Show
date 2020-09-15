@@ -3,12 +3,12 @@ import {render, screen} from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import {fetchShow as mockFetchShow} from "./apis/fetchShow";
 import App from "./App";
-import testShows from "./utils/testShows";
+import {testShows} from "./utils/testShows";
 
 // setup the mock
-console.log("===========================================")
-//jest.mock("./apis/fetchShow");
-//mockFetchShow.mockResolvedValue(testShows);
+//console.log("===========================================")
+jest.mock("./apis/fetchShow.js");
+mockFetchShow.mockResolvedValue(testShows);
 
 test("App renders without errors.", () => {
     render(<App />);

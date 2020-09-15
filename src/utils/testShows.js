@@ -1,4 +1,4 @@
-const testShows = new Promise(() => {return {
+export const testShows = {
     data: {
         "id": 2993,
         "url": "http://www.tvmaze.com/shows/2993/stranger-things",
@@ -597,4 +597,4 @@ const testShows = new Promise(() => {return {
             ]
         }
     }
-}}).then(response => {return response})
+}
